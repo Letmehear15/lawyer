@@ -1,0 +1,47 @@
+.priorityes {
+    padding: 50px 0 119px 0;
+    background: url('../img/strong.jpg') center center/ cover no-repeat;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    &__title {
+        color: #fff;
+        font-family: 'playBold';
+        font-size: 40px;
+        margin-bottom: 59px;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 23px;
+        color: #fff;
+        font-size: 16px;
+        img {
+            display: block;
+            margin-right: 10px;
+        }
+    }
+    &__facts {
+        margin-top: 90px;
+        display: flex;
+        &_md {
+            background-color: #F7F7F7;
+            display: none;
+        }
+    }
+    &__fact,
+    &__fact_md {
+        width: 217px;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        span {
+            font-family: 'Lora', serif;
+            color: $mainColor;
+            font-size: 50px;
+        }
+    }
+
+}

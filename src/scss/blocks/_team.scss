@@ -1,0 +1,61 @@
+.team {
+   &__tan,
+   &__serg {
+       display: flex;
+       margin-top: 50px;
+       border: 1px solid rgb(209, 209, 209);
+       border-radius: 7px;
+       background: url('../icon/backLoy.png') calc(100% - 60px) center no-repeat;
+       &_img {
+           img {
+               height: 100%;
+           }
+       }    
+       &_descr {
+           margin-left: 30px;
+        h2 {
+            margin-top: 40px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+       }
+       &_text {
+           width: 580px;
+           margin-top: 20px;
+           font-size: 16px;
+           line-height: 25px;
+       }
+       &_contact {
+           display: flex;
+           flex-direction: column;
+           margin-top: 180px;
+           &-call {
+               margin-bottom: 20px;
+               display: flex;
+               align-items: center;
+               a {  
+                   display: block;
+                   margin-left: 9px;
+                   color: #000;
+                   text-decoration: none;
+                   font-size: 16px;
+               }
+           }
+           &-mod {
+               margin-top: 132px;
+           }
+           &-mail {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            a {  
+                display: block;
+                margin-left: 9px;
+                color: #000;
+                text-decoration: none;
+                font-size: 16px;
+            }
+        }
+       }
+   } 
+}

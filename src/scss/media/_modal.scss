@@ -1,0 +1,17 @@
+@media only screen and (max-width: 1200px) {
+    .modalBg {
+        &__img {
+            width: 453px;
+            height: 553px;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) { 
+    .modalBg {
+        &__img {
+            width: 453px;
+            height: 553px;
+        }
+    }
+}

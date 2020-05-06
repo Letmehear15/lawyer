@@ -1,0 +1,96 @@
+@media only screen and (max-width: 1200px) {
+    .remote {
+        &__descr {
+            margin-right: 0;
+        }
+    }
+}
+@media only screen and (max-width: 991px) {
+    .remote {
+        padding-bottom: 0;
+        &__title {
+            display: block;
+        }
+        &__wrapper {
+            background: none;
+        }
+        &__img {
+            img:first-child {
+                display: block;
+            }
+        }
+        &__descr {
+            h2 {
+                display: none;
+            }
+            margin-right: 0;
+        }
+        &__list {
+            margin-left: 20px;
+        }
+    }
+}
+@media only screen and (max-width: 768px) { 
+    .remote {
+        &__title {
+            font-size: 30px;
+            span{
+                text-transform: none;
+                font-size: 30px;
+                color: $mainColor;
+                border: none;
+            }
+        }
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+            justify-content: stretch;
+        }
+        &__img {
+            margin-bottom: 30px;
+            img:first-child{
+                display: none;
+            }
+            .md {
+                display: block;
+                border: none;
+            }
+        }
+        &__list {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .down {
+                display: block;
+                margin-top: 9px;
+                margin-bottom: 17px;
+            }
+        }
+        &__item {
+            margin: 0;
+            text-align: center;
+        }
+        &__btn {
+            display: block;
+            width: 272px;
+            height: 57px;
+            margin: 0 auto;
+            margin-top: 50px;
+            background-color: #fff;
+            text-align: center;
+            line-height: 52px;
+            border: 1px solid $mainColor;
+            font-size: 20px;
+            a {
+                text-decoration: none;
+                color: $mainColor;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 319px) {
+    .remote {
+        padding-top: 100px;
+    }
+}

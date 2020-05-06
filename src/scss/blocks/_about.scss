@@ -1,0 +1,30 @@
+.about {
+    padding: 100px 0 91px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        background: url('../img/notebook.jpg') center center/ cover no-repeat;
+        img{
+            width: 300px;
+            height: 100px;
+        }
+    }
+    &__descr {
+        width: 540px;
+        font-size: 16px;
+        line-height: 19px;
+        span {
+            font-weight: bold;
+        }
+    }
+    &__about {
+        display: none;
+    }
+}

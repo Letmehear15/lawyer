@@ -1,0 +1,80 @@
+@media only screen and (max-width: 1200px) {
+    .about {
+        &__img {
+            width: 400px;
+            height: 450px;
+            img{
+                width: 290px;
+                height: 90px;
+            }
+        }
+        &__descr {
+            width: 440px;
+        }
+    }
+}
+@media only screen and (max-width: 991px) {
+    .about {
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__img {
+            width: 100%;
+            height: 200px;
+            border-radius: 3px;
+            img {
+                width: 244px;
+                height: 80px;
+            }
+        }
+        &__descr {
+            width: 100%;
+            margin-top: 30px;
+            line-height: 23px;
+            font-size: 17px;
+        }
+    }
+}
+@media only screen and (max-width: 482px) {
+    .about{
+        position: relative;
+        background: url('../img/backHand.jpg') center -47px /100% 100% no-repeat;
+        &__img {
+            display: none;
+        }
+        .title {
+            color: #fff;
+        }
+        &__descr {
+            color: #fff;
+        }
+        &__about {
+            position: absolute;
+            top: -26px;
+            left: 0;
+            transform: rotate(-6deg) skew(-6deg);
+            display: block;
+            width: 100%;
+            height: 56px;
+            background-color: #f7f7f7;
+        }
+    }
+}
+@media only screen and (max-width: 433px) {
+    .about {
+        position: relative;
+        padding-bottom: 160px;
+        &__about {
+            position: absolute;
+            top: -26px;
+            left: 0;
+            transform: rotate(-6deg) skew(-6deg);
+            display: block;
+            width: 100%;
+            height: 56px;
+            background-color: #f7f7f7;
+        }
+    }
+
+}

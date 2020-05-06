@@ -1,0 +1,22 @@
+@media only screen and (max-width: 991px) {
+    .order {
+        &__title {
+            display: block;
+        }
+        &__subtitle {
+            display: block;
+        }
+        &__wrapper {
+            justify-content: center;
+            margin-top: 50px;
+        }
+        &__descr {
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width: 768px) {  
+    .order {
+        display: none;
+    }
+}

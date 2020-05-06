@@ -1,0 +1,49 @@
+.solution {
+    position: relative;
+    padding-bottom: 130px;
+    &__bg {
+        position: absolute;
+        display: none;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 40px;
+        text-align: center;
+        color: #000;
+        span {
+            color: $mainColor;
+            font-family: 'playBold';
+            font-weight: bold;
+        }
+    }
+    &__subtitle {
+        margin-top: 10px;
+        font-size: 20px;
+        text-align: center;
+    }
+    &__form {
+        background: url('../img/hammer.jpg') center center/ cover no-repeat;
+        padding: 43px 0;
+        margin-top: 40px;
+        border-radius: 5px;
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input {
+                width: 280px;
+                height: 43px;
+                padding: 12px 19px;
+                font-size: 16px;
+                border-radius: 5px;
+                border: 1px solid black;
+                margin-right: 20px;
+            }
+        }
+    }
+    &__btn {
+        margin-left: 55px;
+        color: #fff;
+        font-size: 16px;
+    }
+}

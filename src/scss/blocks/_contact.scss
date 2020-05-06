@@ -1,0 +1,33 @@
+.contact {
+    padding: 100px 0;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+    }
+    &__info {
+        margin-left: 100px;
+    }
+    &__phone,
+    &__mail,
+    &__address {
+        margin-bottom: 40px;
+        span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+        img {
+            display: none;
+        }
+    }
+    #map{
+        width: 600px;
+        height: 400px;
+    }
+}

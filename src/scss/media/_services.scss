@@ -1,0 +1,23 @@
+@media only screen and (max-width: 991px) {
+    .services {
+        &__item {
+            width: 275px;
+        }
+    }
+}
+@media only screen and (max-width: 768px) { 
+    .services {
+        &__items {
+            justify-content: center;
+        }
+    }
+}
+@media only screen and (max-width: 482px) {
+    .services {
+        padding-bottom: 137px;
+        &__item {
+            width: 100%;
+        }
+    }
+
+}

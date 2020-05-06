@@ -1,0 +1,71 @@
+.remote {
+    padding: 120px 0 100px 0;
+    &__title {
+        display: none;
+        text-align: center;
+        font-family: 'playBold';
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 53px;
+        margin-bottom: 40px;
+        span {
+            border-bottom: 1px solid $mainColor;
+            font-family: 'playBold';
+            font-weight: bold;
+            font-size: 40px;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        min-height: 540px;
+        background: url('../icon/lines.png') calc(50% - 30px) calc(50% + 11px) no-repeat,
+                    url('../img/laptop.jpg') left center no-repeat;
+    }
+    &__img {
+        img {
+            display: none;
+            border-radius: 100%;
+        }
+        
+    }
+    &__descr {
+        margin-right: 120px;
+        h2 {
+            text-align: center;
+            font-family: 'playBold';
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 53px;
+            span {
+                border-bottom: 1px solid $mainColor;
+                font-family: 'playBold';
+                font-weight: bold;
+                font-size: 40px;
+            }
+        }
+    }
+    &__list {
+        list-style: none;
+        margin-top: 53px;
+        margin-left: 120px;
+        .down {
+            display: none;
+        }
+    }
+    &__item {
+        margin-bottom: 38px;
+        width: 299px;
+        font-size: 16px;
+        color: rgb(136, 136, 136);
+        span {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 20px;
+            color: #000;
+        }
+    }
+    &__btn {
+        display: none;
+    }
+}

@@ -1,0 +1,152 @@
+@media only screen and (max-width: 1200px) { 
+    .team__tan,
+    .team__serg {
+        &_img {
+
+            img {
+                height: 100%;
+            }   
+        }
+        &_text {
+            width: 405px;
+        }
+        &_contact {
+            margin-top: 130px;
+            &-mod {
+                margin-top: 58px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 991px) {
+    .team__tan,
+    .team__serg {
+        &_img {
+            margin-top: 20px;
+            margin-left: 10px;
+            img:first-child {
+                display: none;
+            }
+            .hide {
+                display: block;
+                height: 250px;
+                width: 250px;
+            }
+        }
+        &_contact {
+            margin-top: 50px;
+        }
+    }
+}
+@media only screen and (max-width: 768px) { 
+    .team__tan,
+    .team__serg {
+        flex-direction: column;
+        align-items: center;
+        border: none;
+        background: none;
+        &_img {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            margin: 0;
+            img:first-child {
+                display: none;
+            }
+            .hide {
+                display: block;
+                width: 330px;
+                height: 330px;
+            }
+            .circle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 300px;
+                height: 300px;
+                border: 1px solid $mainColor;
+                border-radius: 100%;
+                display: block;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 482px) {
+    .team {
+        padding-top: 50px;
+    }
+    .team__tan,
+    .team__serg {
+        &_img {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            img:first-child {
+                display: none;
+            }
+            .hide {
+                display: block;
+                width: 350px;
+                height: 350px;
+            }
+            .circle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 330px;
+                height: 330px;
+                border: 1px solid $mainColor;
+                border-radius: 100%;
+                display: block;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 433px) { 
+    .team {
+        padding-top: 0;
+        &__tan_text,
+        &__serg_text {
+            width: 100%;
+        }
+    }
+    .team__tan,
+    .team__serg {
+        
+        &_img {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            img:first-child {
+                display: none;
+            }
+            .hide {
+                display: block;
+                width: 350px;
+                height: 350px;
+            }
+            .circle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 330px;
+                height: 330px;
+                border: 1px solid $mainColor;
+                border-radius: 100%;
+                display: block;
+            }
+        }
+        &_descr {
+            margin-left: 0;
+        }
+    }
+}

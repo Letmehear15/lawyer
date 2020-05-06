@@ -1,0 +1,68 @@
+@media only screen and (max-width: 991px) {
+    .solution {
+        &__title {
+            font-size: 35px;
+        }
+        &__form {
+            .solForm {
+                input {
+                    width: 180px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) { 
+    .solution {
+        background-color: #f6f6f6;
+        padding-top: 78px;
+        &__bg {
+            display: block;
+            top: -100px;
+            left: 10px;
+        }
+        &__title {
+            font-size: 30px;
+            font-family: 'playBold';
+            width: 260px;
+            margin: auto;
+            span {
+                color: #000; 
+            }
+        }
+        &__subtitle {
+            font-size: 16px;
+            width: 335px;
+            margin: 15px auto;
+        }
+        &__form {
+            background: none;
+            margin-top: 30px;
+            padding: 0;
+            .solForm {
+                flex-direction: column;
+                input {
+                    width: 272px;
+                    height: 57px;
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                    border: 1px solid $mainColor;
+                    border-radius: 4px;
+
+                }
+            }
+        }
+        &__btn {
+            margin: auto;
+        }
+    }
+}
+@media only screen and (max-width: 433px) {
+    .solution {
+        &__subtitle {
+            width: 100%;
+        }
+    }
+}
