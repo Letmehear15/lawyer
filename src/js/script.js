@@ -1,4 +1,16 @@
-window.addEventListener('DOMContentLoaded', function() {
+function loadDom() {
+    document.querySelector('.loadStart').style.display = 'flex';
+    return new Promise(resolve => {
+        window.onload = () => resolve();
+    })
+}
+loadDom().then(
+    () => {
+        setTimeout(showAll, 2000)
+    }
+)
+function showAll() {
+    document.querySelector('.loadStart').style.display = 'none';
     ///SLIDER
     let prev = document.querySelector('.arrow-left'),
         next = document.querySelector('.arrow-right'),
@@ -24,9 +36,9 @@ window.addEventListener('DOMContentLoaded', function() {
         slideWrap.style.width = slides.length * (270 + slideMargin)  + 'px';
     }
 
-    let change = (arr) => {
+    let change = (arr, slide = transition) => {
         arr.forEach(item => {
-            item.style.transform = `translateX(${transition}%)`;
+            item.style.transform = `translateX(${slide}%)`;
         })
     }
     
@@ -38,7 +50,7 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     })
     prev.addEventListener('click', () => {
-        if(transition >= -( slides.length * 100) && transition!=0 ) {
+        if(transition!=0 ) {
             if(winWid <= 768) transition += 100;
             else transition +=120
             change(slides)
@@ -46,7 +58,7 @@ window.addEventListener('DOMContentLoaded', function() {
     })
 
     slideWrap.addEventListener('click', function(e) {
-        if(e.target.className === 'slider__img') {
+        if(e.target.className === 'slider__img' && winWid > 482) {
             let path = e.target.src;
             modal.style.display = 'flex';
             modalImg.src = path;
@@ -60,26 +72,52 @@ window.addEventListener('DOMContentLoaded', function() {
     })
     ///SLIDER SMALL
 
-    let dots = document.querySelectorAll('.slider__dot'),
-        slidImg = document.querySelectorAll('.slidImg');
+    let arrowL = document.querySelector('.arrow_l'),
+        arrowR = document.querySelector('.arrow_r'),
+        posX = 0,
+        bool = false,
+        trans = 0;
 
-        clearImg(1)
-
-        function clearImg(el) {
-            dots[0].style.backgroundColor = '#CC9C48';
-            for(let i = el; i < slidImg.length; i++) {
-                slidImg[i].style.display = 'none';
-                dots[i].style.backgroundColor = ''
-            }
+    arrowL.addEventListener('click', () => {
+        if(trans != 0) {
+            trans+=100
+            change(slides,trans)
         }
+    })
+    arrowR.addEventListener('click', () => {
+        if(trans > -((slides.length-1) * 100)) {
+            trans-=100
+            change(slides,trans)
+        }
+    })
+    
+    slideWrap.addEventListener('touchstart', (e) => {
+        if(winWid <= 482) {
+            posX = e.touches[0].clientX;
+        } 
+    })
+    
+    slideWrap.addEventListener('touchmove', (e) => {
+        if(winWid <= 482) {
+            let slide = posX - e.touches[0].clientX;
+            if(slide > 0) bool = true
+            if(slide < 0) bool = false
+        } 
         
-        dots.forEach((item,index) => {
-            item.addEventListener('click', () => {
-                clearImg(0);
-                slidImg[index].style.display = 'block';
-                dots[index].style.backgroundColor = '#CC9C48'
-            })
-        })
+    })
+
+    slideWrap.addEventListener('touchend', () => {
+        if(winWid <= 482) {
+            if(bool && trans > -((slides.length-1) * 100)) {
+                trans-=100
+                change(slides,trans);
+            }
+            if(!bool && trans != 0) {
+                trans+=100
+                change(slides,trans);
+            }
+        } 
+    })
 
     
     ///SCROLL
@@ -188,4 +226,4 @@ window.addEventListener('DOMContentLoaded', function() {
             item.style.color = "#fff";
         })
     }
-})
+}

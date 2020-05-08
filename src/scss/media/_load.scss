@@ -1,0 +1,16 @@
+@media only screen and (max-width: 482px) {
+    .loadStart {
+        img {
+            width: 300px;
+            height: 100px;
+        }
+    }
+}
+@media only screen and (max-width: 330px) {
+    .loadStart {
+        img {
+            width: 200px;
+            height: 70px;
+        }
+    }
+}

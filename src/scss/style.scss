@@ -6,6 +6,21 @@ $mainColor: #CC9C48;
     box-sizing: border-box;
     font-family: 'roboto';
 }
+.loadStart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    z-index: 9999999;
+    img {
+        animation: 0.7s linear 0s infinite alternate scale;
+    }
+}
 .container{
     width: 1140px;
     margin: auto;
@@ -123,3 +138,4 @@ $mainColor: #CC9C48;
 @import './media/footer';
 @import './media/contact';
 @import './media/modal';
+@import './media/load';

@@ -117,8 +117,7 @@
         }
     }
     .team__tan,
-    .team__serg {
-        
+    .team__serg { 
         &_img {
             position: relative;
             display: flex;
@@ -147,6 +146,21 @@
         }
         &_descr {
             margin-left: 0;
+        }
+    }
+}
+@media only screen and (max-width: 330px) {
+    .team {
+        .team__tan,
+        .team__serg {
+            .hide {
+                width: 300px;
+                height: 300px;
+            }
+            .circle {
+                width: 300px;
+                height: 300px;
+            }
         }
     }
 }
